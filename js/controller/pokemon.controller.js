@@ -5,7 +5,7 @@ class PokemonController{
     }
 
     getPokemon(id){
-        this.view.renderPokemonInfo(this.model.getPokemon(id))
+        this.view.renderPokemonInfo(this.model.getLocalPokemon(id))
     }
 
     getPokemons(){

@@ -24,6 +24,7 @@ class PokemonView{
 
     async renderPokemonInfo(data){
         const pokemon = await data
+        
         let types = ``
         let moves = ``
         let abilities = ``
@@ -40,7 +41,6 @@ class PokemonView{
                 abilities += `
                 <li class="col s4">${ability.ability.name}</li>`
             }
-            console.log(abilities)
             this.pokemonInfo.innerHTML = `
                             <div class="section row">
                             <div class="col s3">
