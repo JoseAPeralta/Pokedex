@@ -1,7 +1,7 @@
 class PokemonModel{
     constructor(){
         this.url = `https://pokeapi.co/api/v2/pokemon/`
-        this.paginationAmount = 5
+        this.paginationAmount = 10
         this.paginationValue = this.paginationAmount
     }
 
@@ -20,7 +20,7 @@ class PokemonModel{
     setPagination(next){
         if(next && this.paginationValue <= 964){
             this.paginationValue += this.paginationAmount
-        }if (next === false && this.paginationValue >= this.paginationAmount) {
+        }if (next === false && this.paginationValue >= this.paginationAmount && (this.paginationValue - this.paginationAmount) >=1) {
             this.paginationValue -= this.paginationAmount
         }else{
         }
