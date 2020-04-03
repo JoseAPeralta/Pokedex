@@ -4,7 +4,7 @@ class PokemonView{
         this.pokemonInfo = document.querySelector('#pokemonInfo')
     }
 
-    resetListContainer(){
+    resetPokemontListContainer(){
         this.pokemonListContainer.innerHTML = ``
     }
     

@@ -9,9 +9,9 @@ class PokemonController{
     }
 
     getPokemons(){
-        this.view.resetListContainer()
+        this.view.resetPokemontListContainer()
         try {
-            for (let i = 1 + this.model.getPagination() ; i <= this.model.getPaginationNextValue(); i++) {
+            for (let i = 1 + this.model.getPaginationValue() ; i <= this.model.getPaginationNextValue(); i++) {
                 this.view.renderPokemons(this.model.getPokemon(i))
             }
         } catch (error) {
