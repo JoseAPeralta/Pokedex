@@ -9,7 +9,14 @@ class PokemonController{
     }
 
     getPokemons(){
-        this.view.renderPokemons(this.model.getPokemons())
+        this.view.resetListContainer()
+        try {
+            for (let i = 1 + this.model.getPagination() ; i <= this.model.getPaginationNextValue(); i++) {
+                this.view.renderPokemons(this.model.getPokemon(i))
+            }
+        } catch (error) {
+            console.log("Error: " + error);
+        }
     }
 
     pagination(next){

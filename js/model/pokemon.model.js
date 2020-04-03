@@ -3,11 +3,18 @@ class PokemonModel{
         this.url = `https://pokeapi.co/api/v2/pokemon/`
         this.paginationAmount = 5
         this.paginationValue = this.paginationAmount
+    }
 
+    getPaginationValue(){
+        return this.paginationValue
     }
 
     getPagination(){
-        return this.paginationValue
+        return (this.paginationValue - this.paginationAmount)
+    }
+
+    getPaginationNextValue(){
+        return (this.getPagination() + this.paginationAmount)
     }
 
     setPagination(next){
@@ -16,28 +23,19 @@ class PokemonModel{
         }if (next === false && this.paginationValue >= this.paginationAmount) {
             this.paginationValue -= this.paginationAmount
         }else{
-            
         }
     }
 
     async getPokemon(id){
         const response = await fetch(`${this.url}${id}`)
         const pokemon = await response.json()
-        console.log(pokemon)
         return pokemon
     }
 
     async getPokemons(){
-        let pokemonList = []
-        try {
-            for (let i = (this.paginationValue - (this.paginationAmount - 1)); i < this.paginationValue; i++) {
-                let result = await this.getPokemon(i)
-                pokemonList.push(result)
-            }
-        } catch (error) {
-            console.log("ERROR: "+ error)
-        }
-        return pokemonList
+        const response = await fetch(`${this.url}${id}`)
+        const pokemon = await response.json()
+        return pokemon
     }
     
 }

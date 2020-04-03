@@ -4,19 +4,21 @@ class PokemonView{
         this.pokemonInfo = document.querySelector('#pokemonInfo')
     }
 
-    async renderPokemons(data){
-        const pokeList = await data
+    resetListContainer(){
         this.pokemonListContainer.innerHTML = ``
+    }
+    
+    async renderPokemons(data){
+        const pokemon = await data
         try {
-            pokeList.forEach(pokemon => {
-                this.pokemonListContainer.innerHTML += `
+            this.pokemonListContainer.innerHTML += `
                 <li class="col s2" id="${pokemon.id}">
                     <img class="responsive-img" src="${pokemon.sprites.front_default}" alt="">
                     ${pokemon.name}
+                    <p>${pokemon.id}</p>
                 </li> `
-            });
         } catch (error) {
-            console.log(error + "error")
+            console.log("ERROR: " + error);
         }
     }
 
