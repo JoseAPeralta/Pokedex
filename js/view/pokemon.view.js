@@ -12,10 +12,12 @@ class PokemonView{
         const pokemon = await data
         try {
             this.pokemonListContainer.innerHTML += `
-                <li class="col s2" id="${pokemon.id}">
+                <li class="col s2" >
+                    <button class="btn-nostyle waves-effect waves-light" id="${pokemon.id}">
                     <img class="responsive-img" src="${pokemon.sprites.front_default}" alt="">
                     ${pokemon.name}
-                    <p>${pokemon.id}</p>
+                    <p>${pokemon.id}<p
+                    </button>
                 </li> `
         } catch (error) {
             console.log("ERROR: " + error);
@@ -42,7 +44,7 @@ class PokemonView{
                 <li class="col s4">${ability.ability.name}</li>`
             }
             this.pokemonInfo.innerHTML = `
-                            <div class="section row">
+                            <div class="section row" pokemonId=${pokemon.id}>
                             <div class="col s3">
                                 <img class="responsive-img circle" src="${pokemon.sprites.front_default}" alt="" height="100" width="100">
                             </div>

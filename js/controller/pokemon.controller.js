@@ -23,4 +23,8 @@ class PokemonController{
         this.model.setPagination(next)
         this.getPokemons()
     }
+
+    getPokemonJson(id){
+        return this.model.getLocalPokemon(id)
+    }
 }

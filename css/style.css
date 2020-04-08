@@ -1,3 +1,25 @@
+:root {
+    --primary-color: #26a69a;
+}
+
 .bar{
     min-height: 40px;
+}
+
+.btn-nostyle,
+.btn-nostyle:hover,
+.btn-nostyle:focus{
+    border: none;
+    color: inherit;
+    background-color: inherit;
+    cursor: pointer;
+}
+
+.btn-nostyle:hover,
+.btn-nostyle:focus{
+    outline: 3px solid var(--primary-color);
+}
+
+.card-panel{
+   padding: 0;
 }
