@@ -1,63 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenido</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokedex</title>
     <link href="/img/favicon.ico" rel="icon" type="image/x-icon" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
     <div class="bar blue"></div>
     <main class="">
-        <div class="row">
-            <!-- Elegir Pokemon -->
-            <section class="col s4 ">
-                <header class="row">
-                    <h3 class="center-align"> 
-                        <button id="previusPokemonsBtn" class="waves-effect waves-light btn-small">atras</button> 
-                        Select Pokemon
-                        <button id="nextBtnPokemonsBtn" class="waves-effect waves-light btn-small">siguiente</button>
-                    </h3>
-                </header>
-                <div class="divider"></div>
-                <ul id="pokemonListContainer" class="row"></ul>                
-            </section>
-            <!-- Estadisticas del pokemon -->
-            <section class="col s4">
-                    <header>
-                        <h3>Estadisticas <button id="addToTeamBtn" class="waves-effect waves-light btn-small">Agregar</button></h3>
-                    </header>
-                    <div class="divider"></div>
-                    <div id="pokemonInfo" class="row"></div>
-            </section>
-            <!-- Entrenador -->
-            <section class="col s4">
+      <div class="row">
+        <!-- Elegir Pokemon -->
+        <section class="col s6">
+          <header class="row">
+            <h3 class="center-align">
+              <button
+                id="previusPokemonsBtn"
+                class="waves-effect waves-light btn-small"
+              >
+                prev
+              </button>
+              Select
+              <button
+                id="nextBtnPokemonsBtn"
+                class="waves-effect waves-light btn-small"
+              >
+                next
+              </button>
+            </h3>
+          </header>
+          <div class="divider"></div>
+          <ul id="pokemonListContainer" class="row"></ul>
+        </section>
+        <!-- Estadisticas del pokemon -->
+        <section class="col s6">
+          <section class="section">
+            <h3>Team</h3>
+            <ul class="row" id="teamContainer"></ul>
+          </section>
+          <section class="section">
+            <header>
+              <h3>
+                Info
+                <button
+                  id="addToTeamBtn"
+                  class="waves-effect waves-light btn-small"
+                >
+                  Add
+                </button>
+              </h3>
+            </header>
+            <div class="divider"></div>
+            <div id="pokemonInfo" class="row"></div>
+          </section>
+        </section>
+        <!-- Entrenador -->
+        <!-- <section class="col s4">
                 <section class="section">
                     <header>
                         <h3>Entrenador <button id="newTrainer" class="waves-effect waves-light btn-small">New</button></h3>
                     </header>
                     <div class="divider"></div>
-                    <!-- Entrenador -->
+                    Entrenador
                         <div id="trainerContainer" class="row"></div>
                 </section>
                 <div class="divider"></div>
-                <section class="section">
-                    <h3>Equipo Pokemon</h3>
-                        <ul class="row" id="teamContainer">
-                        </ul>
-                </section>                
-            </section>
-        </div>
+                          
+            </section> -->
+      </div>
     </main>
     <!--Trainer-->
-    <script src="js/model/trainer.model.js"></script>
+    <!-- <script src="js/model/trainer.model.js"></script>
     <script src="js/view/trainer.view.js"></script>
-    <script src="js/controller/trainer.controller.js"></script>
+    <script src="js/controller/trainer.controller.js"></script> -->
 
-    <!--Pokemons-->  
+    <!--Pokemons-->
     <script src="js/model/pokemon.model.js"></script>
     <script src="js/view/pokemon.view.js"></script>
     <script src="js/controller/pokemon.controller.js"></script>
@@ -67,8 +90,7 @@
     <script src="js/view/team.view.js"></script>
     <script src="js/controller/team.controller.js"></script>
 
-
     <script src="main.js"></script>
     <script src="js/dispacher.js"></script>
-</body>
+  </body>
 </html>
